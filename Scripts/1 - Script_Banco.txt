@@ -1,0 +1,128 @@
+CREATE TABLE tipo_centro_custo (
+	ticc_sq_tp_centro_custo int NOT NULL AUTO_INCREMENT,
+	ticc_ds_tp_centro_custo varchar(30) NOT NULL,
+	PRIMARY KEY (ticc_sq_tp_centro_custo)
+);
+
+CREATE TABLE centro_custo (
+	cecu_sq_centro_custo int NOT NULL AUTO_INCREMENT,
+	cecu_nm_centro_custo varchar(30) NOT NULL,
+	ticc_sq_tp_centro_custo int NOT NULL,
+	PRIMARY KEY (cecu_sq_centro_custo),
+	FOREIGN KEY (ticc_sq_tp_centro_custo) REFERENCES tipo_centro_custo(ticc_sq_tp_centro_custo)
+);
+
+INSERT INTO tipo_centro_custo (
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Casa'
+);
+
+INSERT INTO tipo_centro_custo (
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Terreno'
+);
+INSERT INTO tipo_centro_custo (
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Apartamento'
+);
+
+INSERT INTO tipo_centro_custo (
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Pessoais'
+);
+
+INSERT INTO tipo_centro_custo (
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Veículo'
+);
+
+INSERT INTO tipo_centro_custo (
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Cotas'
+);
+
+INSERT INTO centro_custo (
+	cecu_nm_centro_custo,
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Jardim das Acácias',
+	1
+);
+
+INSERT INTO centro_custo (
+	cecu_nm_centro_custo,
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Parque Baronesa',
+	2
+);
+
+INSERT INTO centro_custo (
+	cecu_nm_centro_custo,
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'La Vista Residencial',
+	3
+);
+
+INSERT INTO centro_custo (
+	cecu_nm_centro_custo,
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Francisco',
+	4
+);
+
+INSERT INTO centro_custo (
+	cecu_nm_centro_custo,
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Glett',
+	4
+);
+
+INSERT INTO centro_custo (
+	cecu_ds_centro_custo,
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Hugo',
+	4
+);
+
+INSERT INTO centro_custo (
+	cecu_ds_centro_custo,
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Moradas do Sol',
+	3
+);
+
+INSERT INTO centro_custo (
+	cecu_nm_centro_custo,
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Grussaí',
+	2
+);
+
+INSERT INTO centro_custo (
+	cecu_nm_centro_custo,
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Parque Crystais',
+	2
+);
+
+INSERT INTO centro_custo (
+	cecu_nm_centro_custo,
+	ticc_ds_tp_centro_custo
+) VALUES (
+	'Cidade Jardim',
+	2
+);
